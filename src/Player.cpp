@@ -49,3 +49,10 @@ void Player::update(float deltaTime) {
 void Player::render(sf::RenderWindow& window) {
     window.draw(mShape);
 }
+
+void Player::reset() {
+    // Reset player to initial position and state
+    setPosition({960 - 50, 540 - 50});
+    mVelocityY = 0.0f;
+    mIsOnGround = true;
+}
